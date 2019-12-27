@@ -1,11 +1,14 @@
 import React from "react";
-import { StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text, Button } from "react-native";
 import { globalStyles } from "../styles/global";
 
-const BookDetails = () => {
+const BookDetails = ({ navigation }) => {
   return (
     <View style={globalStyles.container}>
-      <Text>BookDetails</Text>
+      <Text>{navigation.getParam("title")}</Text>
+      <Text>{navigation.getParam("author")}</Text>
+      <Text>{navigation.getParam("rating")}</Text>
+      <Text>{navigation.getParam("notes")}</Text>
     </View>
   );
 };

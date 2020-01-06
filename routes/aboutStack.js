@@ -1,13 +1,19 @@
 import { createStackNavigator } from "react-navigation-stack";
+import React from "react";
 
 import About from "../screens/About";
+import Header from "../shared/Header";
 
 const screens = {
   // first one will be shown as default
   About: {
     screen: About,
-    navigationOptions: {
-      title: "About BookZone"
+    navigationOptions: ({ navigation }) => {
+      return {
+        headerTitle: () => (
+          <Header navigation={navigation} title="About BookZone" />
+        )
+      };
     }
   }
 };

@@ -67,6 +67,7 @@ export default BookForm = ({ addBook }) => {
             </Text>
             <TextInput
               multiline
+              minHeight={60}
               style={globalStyles.input}
               placeholder="My notes about the book"
               onChangeText={formikprops.handleChange("notes")}
